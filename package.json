@@ -1,0 +1,26 @@
+{
+  "name": "eduvault-v2",
+  "version": "2.0.0",
+  "private": true,
+  "description": "EduVault educational materials library with admin upload and secure server-side downloads.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "@google/genai": "^2.23.0",
+    "bcryptjs": "^2.4.3",
+    "csrf-csrf": "^4.0.3",
+    "dotenv": "^18.0.1",
+    "express": "^4.21.2",
+    "express-rate-limit": "^8.7.0",
+    "express-session": "^1.18.1",
+    "marked": "^18.0.13",
+    "multer": "^1.4.5-lts.1",
+    "openai": "^7.20.0"
+  }
+}

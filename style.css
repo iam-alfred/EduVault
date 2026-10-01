@@ -1,0 +1,280 @@
+* { box-sizing: border-box; }
+
+:root {
+  --primary: #174ea6;
+  --primary-dark: #123b7d;
+  --background: #f5f7fb;
+  --card: #ffffff;
+  --text: #172033;
+  --muted: #657085;
+  --border: #e1e6ef;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--text);
+  background: var(--background);
+}
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding: 18px 7%;
+  background: white;
+  border-bottom: 1px solid var(--border);
+}
+
+.logo {
+  color: var(--primary);
+  font-size: 25px;
+  font-weight: 800;
+}
+
+nav {
+  display: flex;
+  gap: 22px;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: var(--text);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+nav a:hover { color: var(--primary); }
+
+.hero {
+  text-align: center;
+  padding: 85px 20px 75px;
+  background: linear-gradient(135deg, #eef4ff, #ffffff);
+}
+
+.eyebrow {
+  margin: 0 0 10px;
+  color: var(--primary);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+.hero h1 {
+  max-width: 800px;
+  margin: auto;
+  font-size: clamp(38px, 6vw, 66px);
+  line-height: 1.05;
+}
+
+.hero-text {
+  max-width: 620px;
+  margin: 20px auto 28px;
+  color: var(--muted);
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+.search-box {
+  display: flex;
+  max-width: 700px;
+  margin: auto;
+  background: white;
+  padding: 7px;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  box-shadow: 0 8px 30px rgba(23, 78, 166, 0.08);
+}
+
+.search-box input {
+  flex: 1;
+  min-width: 0;
+  border: 0;
+  outline: 0;
+  padding: 14px;
+  font-size: 16px;
+}
+
+button {
+  border: 0;
+  cursor: pointer;
+  font: inherit;
+}
+
+.search-box button,
+#aiBtn {
+  background: var(--primary);
+  color: white;
+  border-radius: 10px;
+  padding: 13px 22px;
+  font-weight: 700;
+}
+
+.search-box button:hover,
+#aiBtn:hover { background: var(--primary-dark); }
+
+.section {
+  max-width: 1100px;
+  margin: auto;
+  padding: 65px 20px;
+}
+
+.section-heading { margin-bottom: 25px; }
+
+.section-heading h2,
+.ai-box h2 {
+  margin: 0 0 8px;
+  font-size: 30px;
+}
+
+.section-heading p,
+.ai-box p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.categories {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+}
+
+.category-card {
+  min-height: 135px;
+  padding: 20px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 15px;
+  transition: 0.2s;
+}
+
+.category-card:hover {
+  transform: translateY(-3px);
+  border-color: #aac3ed;
+  box-shadow: 0 10px 25px rgba(23, 78, 166, 0.08);
+}
+
+.category-card span {
+  display: block;
+  font-size: 32px;
+  margin-bottom: 13px;
+}
+
+.category-card strong { font-size: 15px; }
+
+.materials-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+
+.material-card {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 15px;
+  align-items: center;
+  padding: 20px;
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 15px;
+}
+
+.file-icon {
+  display: grid;
+  place-items: center;
+  width: 55px;
+  height: 55px;
+  border-radius: 12px;
+  background: #edf3ff;
+  color: var(--primary);
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.material-card h3 {
+  margin: 7px 0 5px;
+  font-size: 17px;
+}
+
+.material-card p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.tag {
+  color: var(--primary);
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.download-btn {
+  grid-column: 1 / -1;
+  padding: 11px 15px;
+  border-radius: 9px;
+  background: #eef3fb;
+  color: var(--primary);
+  font-weight: 700;
+}
+
+.download-btn:hover { background: #dfe9f9; }
+
+.ai-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 25px;
+  padding: 35px;
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+}
+
+.message {
+  min-height: 20px;
+  margin: 12px 0 0;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.7;
+  white-space: pre-wrap;
+}
+
+footer {
+  padding: 35px 20px;
+  text-align: center;
+  background: #101827;
+  color: white;
+}
+
+footer p {
+  margin: 7px 0 0;
+  color: #b8c2d4;
+}
+
+.hidden { display: none !important; }
+
+@media (max-width: 760px) {
+  .navbar { padding: 15px 20px; flex-direction: column; }
+  nav { justify-content: center; gap: 14px; }
+  .categories { grid-template-columns: repeat(2, 1fr); }
+  .materials-grid { grid-template-columns: 1fr; }
+  .ai-box { flex-direction: column; align-items: flex-start; }
+}
+
+@media (max-width: 480px) {
+  .hero { padding: 60px 16px; }
+  .search-box { flex-direction: column; }
+  .search-box button { width: 100%; }
+  .categories { grid-template-columns: 1fr 1fr; gap: 9px; }
+  .category-card { min-height: 115px; padding: 14px 8px; }
+  .section { padding: 45px 15px; }
+}
+.logo{text-decoration:none}.primary-btn,.secondary-btn,.danger-btn{border:0;border-radius:9px;padding:11px 16px;font-weight:700;cursor:pointer}.primary-btn{background:var(--primary);color:#fff}.secondary-btn{background:#eef3fb;color:var(--primary)}.danger-btn{background:#fff0f0;color:#a52323}.panel{background:#fff;border:1px solid var(--border);border-radius:16px;padding:24px;margin-bottom:20px}.panel h2{margin-top:0}.panel-head{display:flex;justify-content:space-between;gap:15px;align-items:center}.panel label{display:block;font-weight:700;font-size:14px;margin-bottom:15px}.panel input,.panel select{display:block;width:100%;margin-top:7px;padding:12px;border:1px solid var(--border);border-radius:9px;font:inherit}.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:15px}.admin-row{display:flex;justify-content:space-between;align-items:center;gap:15px;border-top:1px solid var(--border);padding:15px 0}.admin-row small{display:block;color:var(--muted);margin-top:4px}.download-btn{display:flex;justify-content:space-between;align-items:center;text-decoration:none}.download-btn span{font-size:11px;opacity:.7}@media(max-width:650px){.form-grid{grid-template-columns:1fr}.admin-row{align-items:flex-start;flex-direction:column}.admin-row .danger-btn{width:100%}}

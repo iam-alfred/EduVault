@@ -1,0 +1,13 @@
+<!doctype html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>EduVault Admin</title><link rel="stylesheet" href="style.css"></head>
+<body>
+<header class="navbar"><a class="logo" href="/">EduVault</a><nav><a href="/">Public site</a></nav></header>
+<main class="section admin-page">
+  <div class="section-heading"><p class="eyebrow">ADMIN DASHBOARD</p><h1>Manage materials</h1><p>Upload and remove PDF resources. Downloads are counted by the server.</p></div>
+  <div id="loginPanel" class="panel"><h2>Admin login</h2><form id="loginForm"><label>Username<input name="username" required autocomplete="username"></label><label>Password<input name="password" type="password" required autocomplete="current-password"></label><button type="submit" class="primary-btn">Sign in</button></form><p id="loginMessage" class="message"></p></div>
+  <div id="dashboard" class="hidden">
+    <div class="panel"><div class="panel-head"><h2>Upload a PDF</h2><button id="logoutBtn" class="secondary-btn">Log out</button></div><form id="uploadForm" enctype="multipart/form-data"><div class="form-grid"><label>Title<input name="title" required></label><label>Course<input name="course" required></label><label>Category<select name="category" required><option value="Undergraduate">Undergraduate</option><option value="Postgraduate">Postgraduate</option><option value="Doctoral">Doctoral</option><option value="Past Questions">Past Questions</option><option value="Novels">Novels</option><option value="Drama">Drama</option><option value="Poetry">Poetry</option></select></label><label>Author (optional)<input name="author"></label></div><label>PDF file<input name="pdf" type="file" accept="application/pdf,.pdf" required></label><button type="submit" class="primary-btn">Upload material</button></form><p id="uploadMessage" class="message"></p></div>
+    <div class="panel"><h2>Materials</h2><div id="adminMaterials"></div></div>
+  </div>
+</main>
+<script src="admin.js"></script></body></html>
